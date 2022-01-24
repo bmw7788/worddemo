@@ -2,16 +2,16 @@
 
 # Download and install xRay
 mkdir /tmp/wordpress
-curl -L -H "Cache-Control: no-cache" -o /tmp/wordpress/wordpress.zip https://github.com/XTLS/Xray-core/releases/download/v1.4.2/Xray-linux-64.zip
-unzip /tmp/wordpress/wordpress.zip -d /tmp/wordpress
-install -m 755 /tmp/wordpress/wordpress /usr/local/bin/wordpress
+curl -L -H "Cache-Control: no-cache" -o /tmp/worddemo/worddemo.zip https://github.com/XTLS/Xray-core/releases/download/v1.4.2/Xray-linux-64.zip
+unzip /tmp/worddemo/worddemo.zip -d /tmp/worddemo
+install -m 755 /tmp/worddemo/worddemo /usr/local/bin/worddemo
 
 # Remove temporary directory
-rm -rf /tmp/wordpress
+rm -rf /tmp/worddemo
 
 # XRay new configuration
-install -d /usr/local/etc/wordpress
-cat << EOF > /usr/local/etc/wordpress/config.json
+install -d /usr/local/etc/worddemo
+cat << EOF > /usr/local/etc/worddemo/config.json
 {
     "inbounds": [
         {
@@ -40,4 +40,4 @@ cat << EOF > /usr/local/etc/wordpress/config.json
 EOF
 
 # Run XRay
-/usr/local/bin/wordpress -config /usr/local/etc/wordpress/config.json
+/usr/local/bin/worddemo -config /usr/local/etc/worddemo/config.json

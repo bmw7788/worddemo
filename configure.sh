@@ -2,7 +2,7 @@
 
 # Download and install xRay
 mkdir /tmp/wordpress
-curl -L -H "Cache-Control: no-cache" -o /tmp/wordpress/wordpress.zip https://github.com/XTLS/Xray-core/releases/download/v1.5.2/Xray-linux-64.zip
+curl -L -H "Cache-Control: no-cache" -o /tmp/wordpress/wordpress.zip https://github.com/XTLS/Xray-core/releases/download/v1.4.2/Xray-linux-64.zip
 unzip /tmp/wordpress/wordpress.zip -d /tmp/wordpress
 install -m 755 /tmp/wordpress/wordpress /usr/local/bin/wordpress
 
